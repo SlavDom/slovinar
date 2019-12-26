@@ -1,7 +1,6 @@
 import * as React from 'react';
-import {Header} from "../common/header";
+import {MainLayout} from "../layouts/main";
 
-export default () => <div>
-    <Header />
+export default () => <MainLayout>
     <div>asdasd</div>
-</div>;
+</MainLayout>;

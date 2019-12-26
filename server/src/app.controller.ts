@@ -6,10 +6,11 @@ import {INews} from '../../dto/dist/news';
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
-  // @Get('/about')
-  // getHello(): string {
-  //   return this.appService.getHello();
-  // }
+  @Get('/posts')
+  @Render('index')
+  public posts(): {} {
+    return {};
+  }
 
   @Get()
   @Render('index')
