@@ -10,15 +10,16 @@
     "esModuleInterop": true,
     "outDir": "./dist",
     "baseUrl": "./",
-    "incremental": true
+    "incremental": true,
+    "jsx": "preserve"
   },
   "exclude": [
-    "node_modules",
+    "server/node_modules",
     "dist"
   ],
   "references": [
     {
-      "path": "../dto"
+      "path": "./dto"
     }
   ]
 }
