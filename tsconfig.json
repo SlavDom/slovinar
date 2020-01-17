@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
     "declaration": true,
     "removeComments": true,
     "emitDecoratorMetadata": true,
@@ -10,16 +9,15 @@
     "esModuleInterop": true,
     "outDir": "./dist",
     "baseUrl": "./",
-    "incremental": true,
-    "jsx": "preserve"
+    "incremental": true
   },
   "exclude": [
-    "server/node_modules",
-    "dist"
+    "node_modules",
+    "dist",
+    "app"
   ],
-  "references": [
-    {
-      "path": "./dto"
-    }
+  "include": [
+    "**/*.ts",
+    "**/*.tsx"
   ]
 }
