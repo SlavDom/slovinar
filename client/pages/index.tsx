@@ -4,7 +4,7 @@ import {Box} from 'grommet';
 
 const Title = styled.h1`
   font-size: 50px;
-  color: ${({ theme }) => theme.colors.primary};
+  color: ${({ theme }) => theme.global.colors.focus};
 `;
 
 export default () => <Box><Title>My page</Title></Box>;
