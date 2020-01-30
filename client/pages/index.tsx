@@ -1,10 +1,29 @@
-import React from 'react';
+import React, {ChangeEvent, Component} from 'react';
 import styled from 'styled-components';
-import {Box} from 'grommet';
+import {Box, TextInput} from 'grommet';
 
 const Title = styled.h1`
   font-size: 50px;
   color: ${({ theme }) => theme.global.colors.focus};
 `;
 
-export default () => <Box><Title>My page</Title></Box>;
+export default class MainPage extends Component {
+    public state = {
+        wordName: '',
+    };
+
+    private onChange(e: ChangeEvent<HTMLInputElement>) {
+        this.setState({
+            wordName: e.target.value,
+        });
+    }
+
+    public render() {
+        return <div>
+            <TextInput
+                value={this.state.wordName}
+                onChange={this.onChange}
+            />
+        </div>
+    }
+}
