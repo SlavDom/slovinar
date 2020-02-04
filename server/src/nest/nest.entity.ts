@@ -1,13 +1,10 @@
 import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()
-export class UserEntity {
+export class Nest {
     @PrimaryGeneratedColumn()
     id: number;
 
-    @Column({ length: 500 })
-    name: string;
-
-    @Column('text')
-    description: string;
+    @Column({ length: 50 })
+    value: string;
 }
