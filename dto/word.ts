@@ -13,6 +13,24 @@ export enum DECLENSION {
     THIRD_NEUTRAL_ANIMATE,
 }
 
+export enum PART_OF_SPEECH {
+    NOUN,
+    PRONOUN,
+    ADJECTIVE,
+    NUMERAL,
+    ADVERB,
+    VERB,
+    PARTICIPLE,
+    PREDICATIVE,
+    GERUND,
+    ARTICLE,
+    PARTICLE,
+    PREPOSITION,
+    CONJUNCTION,
+    INTERJECTION,
+    ONOMATOPOETIC,
+}
+
 export enum CONJUGATION {
     A_TYPE,
     E_TYPE,
