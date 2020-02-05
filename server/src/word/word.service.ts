@@ -15,6 +15,6 @@ export class WordService {
     }
 
     async add(word: Word): Promise<Word> {
-        return this.wordRepository.create(word);
+        return this.wordRepository.save(word);
     }
 }

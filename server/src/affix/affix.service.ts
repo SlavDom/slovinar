@@ -15,6 +15,11 @@ export class AffixService {
     }
 
     async add(affix: Affix): Promise<Affix> {
-        return this.affixRepository.create(affix);
+        const toSave = this.affixRepository.create(affix);
+        return this.affixRepository.save(toSave);
+    }
+
+    async findByName(name: string): Promise<Affix[]> {
+        return this.affixRepository.find({ where: { value: name } });
     }
 }

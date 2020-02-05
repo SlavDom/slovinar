@@ -1,9 +1,5 @@
 import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
-
-export enum AFFIX_TYPE {
-    SUFFIX= 'suffix',
-    PREFIX= 'prefix',
-}
+import {AFFIX_TYPE} from '../../../dto/dist/affix';
 
 @Entity()
 export class Affix {

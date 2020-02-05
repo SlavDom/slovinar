@@ -1,13 +1,19 @@
-import {Controller, Get, Param} from '@nestjs/common';
+import {Body, Controller, Get, Param, Post} from '@nestjs/common';
+import {NestService} from './nest.service';
+import {NestDTO} from '../../../dto/dist/nest';
+import {Nest} from './nest.entity';
 
 @Controller('nests')
 export class NestController {
+    constructor(private readonly nestService: NestService) {}
     @Get()
-    public findAll(): string {
-        return 'This action returns all cats';
+    public async findAll(): Promise<NestDTO[]> {
+        return this.nestService.findAll();
     }
-    @Get(':id')
-    public find(@Param('id') id) {
-        return 'asd';
+    @Post()
+    public async create(@Body() nestDTO: NestDTO): Promise<NestDTO> {
+        const nest = new Nest();
+        nest.value = nestDTO.value;
+        return this.nestService.add(nest);
     }
 }

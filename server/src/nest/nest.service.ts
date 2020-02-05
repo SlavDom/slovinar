@@ -15,6 +15,7 @@ export class NestService {
     }
 
     async add(word: Nest): Promise<Nest> {
-        return this.nestRepository.create(word);
+        const toSave = this.nestRepository.create(word);
+        return this.nestRepository.save(toSave);
     }
 }
