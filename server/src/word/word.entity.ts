@@ -1,24 +1,7 @@
 import {Entity, Column, PrimaryGeneratedColumn, ManyToMany} from 'typeorm';
 import {Nest} from '../nest/nest.entity';
 import {Affix} from '../affix/affix.entity';
-
-export enum PART_OF_SPEECH {
-    NOUN,
-    PRONOUN,
-    ADJECTIVE,
-    NUMERAL,
-    ADVERB,
-    VERB,
-    PARTICIPLE,
-    PREDICATIVE,
-    GERUND,
-    ARTICLE,
-    PARTICLE,
-    PREPOSITION,
-    CONJUNCTION,
-    INTERJECTION,
-    ONOMATOPOETIC,
-}
+import {PART_OF_SPEECH} from '../../../dto/dist/word';
 
 @Entity()
 export class Word {

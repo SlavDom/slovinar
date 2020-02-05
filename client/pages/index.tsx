@@ -1,13 +1,15 @@
 import React, {ChangeEvent, Component} from 'react';
 import styled from 'styled-components';
 import {Box, TextInput} from 'grommet';
+import {withTranslation} from 'react-i18next';
+import {WithTranslation} from 'next-i18next';
 
 const Title = styled.h1`
   font-size: 50px;
   color: ${({ theme }) => theme.global.colors.focus};
 `;
 
-export default class MainPage extends Component {
+class MainPage extends Component<WithTranslation> {
     public state = {
         wordName: '',
     };
@@ -24,6 +26,9 @@ export default class MainPage extends Component {
                 value={this.state.wordName}
                 onChange={this.onChange}
             />
+            {this.props.t('test')}
         </div>
     }
 }
+
+export default withTranslation('common')(MainPage);
