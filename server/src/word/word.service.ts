@@ -2,6 +2,7 @@ import { Injectable } from '@nestjs/common';
 import {InjectRepository} from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { Word } from './word.entity';
+import {WordDTO} from '../../../dto/dist/word';
 
 @Injectable()
 export class WordService {
@@ -14,7 +15,8 @@ export class WordService {
         return this.wordRepository.find();
     }
 
-    async add(word: Word): Promise<Word> {
+    async add(wordDTO: WordDTO): Promise<Word> {
+        const word = this.wordRepository.create(wordDTO);
         return this.wordRepository.save(word);
     }
 }
