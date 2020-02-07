@@ -14,23 +14,23 @@ export class Word {
     @Column()
     en: string;
 
-    @Column()
+    @Column({ default: '' })
     eo: string;
 
-    @Column()
+    @Column({ nullable: true })
     conj: number;
 
-    @Column()
+    @Column({ nullable: true })
     decl: number;
 
-    @Column()
+    @Column({ nullable: true })
     ending: string;
 
     @ManyToMany(() => Nest)
     nests: Nest[];
 
     @Column()
-    partId: PART_OF_SPEECH;
+    part: PART_OF_SPEECH;
 
     // @BelongsToMany(() => Tag, () => WordTag)
     // tags: Tag[];

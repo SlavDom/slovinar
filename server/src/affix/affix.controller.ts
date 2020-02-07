@@ -16,9 +16,6 @@ export class AffixController {
     }
     @Post()
     public async add(@Body() affixDto: AffixDTO): Promise<AffixDTO> {
-        const affix = new Affix();
-        affix.value = affixDto.value;
-        affix.affixType = AFFIX_TYPE.PREFIX;
-        return this.affixService.add(affix);
+        return this.affixService.add(affixDto);
     }
 }

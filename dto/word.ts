@@ -1,3 +1,6 @@
+import {AFFIX_TYPE, AffixDTO} from './affix';
+import {NestDTO} from './nest';
+
 export enum DECLENSION {
     FIRST_FEMININE_HARD,
     FIRST_MASCULINE_HARD,
@@ -37,4 +40,15 @@ export enum CONJUGATION {
     I_TYPE,
     U_TYPE,
     EXTRA_TYPE,
+}
+
+export interface WordDTO {
+    en: string;
+    value: string;
+    nests: NestDTO[];
+    ending?: string;
+    affixes: AffixDTO[];
+    part: PART_OF_SPEECH;
+    conj?: CONJUGATION;
+    decl?: DECLENSION;
 }

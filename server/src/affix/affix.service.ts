@@ -2,6 +2,7 @@ import { Injectable } from '@nestjs/common';
 import {InjectRepository} from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import {Affix} from './affix.entity';
+import {AffixDTO} from '../../../dto/dist/affix';
 
 @Injectable()
 export class AffixService {
@@ -14,7 +15,7 @@ export class AffixService {
         return this.affixRepository.find();
     }
 
-    async add(affix: Affix): Promise<Affix> {
+    async add(affix: AffixDTO): Promise<Affix> {
         const toSave = this.affixRepository.create(affix);
         return this.affixRepository.save(toSave);
     }
