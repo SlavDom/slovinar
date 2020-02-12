@@ -1,7 +1,7 @@
 import {AffixDTO} from './affix';
 import {NestDTO} from './nest';
-import {NOUN_DECLENSION} from "./declension";
-import {CONJUGATION} from "./conjugation";
+import {NOUN_DECLENSION} from "./noun";
+import {CONJUGATION} from "./verb";
 
 export enum PART_OF_SPEECH {
     NOUN,
