@@ -38,16 +38,227 @@ export enum MOOD {
     DECLARATIVE,
 }
 
-export function conjIApi(wordBase: string, person: PERSON, number: NUMBER) {
+export function conjInApi(wordBase: string, person: PERSON, number: NUMBER) {
     switch ([person, number]) {
         case [PERSON.FIRST, NUMBER.SINGLE]:
+            return wordBase;
+        case [PERSON.SECOND, NUMBER.SINGLE]:
+            return wordBase;
+        case [PERSON.THIRD, NUMBER.SINGLE]:
+            return wordBase;
+        case [PERSON.FIRST, NUMBER.DUAL]:
+            return wordBase;
+        case [PERSON.SECOND, NUMBER.DUAL]:
+            return wordBase;
+        case [PERSON.THIRD, NUMBER.DUAL]:
+            return wordBase;
+        case [PERSON.FIRST, NUMBER.PLURAL]:
+            return wordBase;
+        case [PERSON.SECOND, NUMBER.PLURAL]:
+            return wordBase;
+        case [PERSON.THIRD, NUMBER.PLURAL]:
             return wordBase;
         default:
             return wordBase;
     }
 }
 
-export function conjIpi(
+export function conjInEpi(wordBase: string, person: PERSON, number: NUMBER) {
+    switch ([person, number]) {
+        case [PERSON.FIRST, NUMBER.SINGLE]:
+            return wordBase;
+        case [PERSON.SECOND, NUMBER.SINGLE]:
+            return wordBase;
+        case [PERSON.THIRD, NUMBER.SINGLE]:
+            return wordBase;
+        case [PERSON.FIRST, NUMBER.DUAL]:
+            return wordBase;
+        case [PERSON.SECOND, NUMBER.DUAL]:
+            return wordBase;
+        case [PERSON.THIRD, NUMBER.DUAL]:
+            return wordBase;
+        case [PERSON.FIRST, NUMBER.PLURAL]:
+            return wordBase;
+        case [PERSON.SECOND, NUMBER.PLURAL]:
+            return wordBase;
+        case [PERSON.THIRD, NUMBER.PLURAL]:
+            return wordBase;
+        default:
+            return wordBase;
+    }
+}
+
+export function conjInIpi(wordBase: string, person: PERSON, number: NUMBER) {
+    switch ([person, number]) {
+        case [PERSON.FIRST, NUMBER.SINGLE]:
+            return wordBase;
+        case [PERSON.SECOND, NUMBER.SINGLE]:
+            return wordBase;
+        case [PERSON.THIRD, NUMBER.SINGLE]:
+            return wordBase;
+        case [PERSON.FIRST, NUMBER.DUAL]:
+            return wordBase;
+        case [PERSON.SECOND, NUMBER.DUAL]:
+            return wordBase;
+        case [PERSON.THIRD, NUMBER.DUAL]:
+            return wordBase;
+        case [PERSON.FIRST, NUMBER.PLURAL]:
+            return wordBase;
+        case [PERSON.SECOND, NUMBER.PLURAL]:
+            return wordBase;
+        case [PERSON.THIRD, NUMBER.PLURAL]:
+            return wordBase;
+        default:
+            return wordBase;
+    }
+}
+
+export function conjInUpi(wordBase: string, person: PERSON, number: NUMBER) {
+    switch ([person, number]) {
+        case [PERSON.FIRST, NUMBER.SINGLE]:
+            return wordBase;
+        case [PERSON.SECOND, NUMBER.SINGLE]:
+            return wordBase;
+        case [PERSON.THIRD, NUMBER.SINGLE]:
+            return wordBase;
+        case [PERSON.FIRST, NUMBER.DUAL]:
+            return wordBase;
+        case [PERSON.SECOND, NUMBER.DUAL]:
+            return wordBase;
+        case [PERSON.THIRD, NUMBER.DUAL]:
+            return wordBase;
+        case [PERSON.FIRST, NUMBER.PLURAL]:
+            return wordBase;
+        case [PERSON.SECOND, NUMBER.PLURAL]:
+            return wordBase;
+        case [PERSON.THIRD, NUMBER.PLURAL]:
+            return wordBase;
+        default:
+            return wordBase;
+    }
+}
+
+export function conjInXpi(wordBase: string, person: PERSON, number: NUMBER) {
+    switch ([person, number]) {
+        case [PERSON.FIRST, NUMBER.SINGLE]:
+            return wordBase;
+        case [PERSON.SECOND, NUMBER.SINGLE]:
+            return wordBase;
+        case [PERSON.THIRD, NUMBER.SINGLE]:
+            return wordBase;
+        case [PERSON.FIRST, NUMBER.DUAL]:
+            return wordBase;
+        case [PERSON.SECOND, NUMBER.DUAL]:
+            return wordBase;
+        case [PERSON.THIRD, NUMBER.DUAL]:
+            return wordBase;
+        case [PERSON.FIRST, NUMBER.PLURAL]:
+            return wordBase;
+        case [PERSON.SECOND, NUMBER.PLURAL]:
+            return wordBase;
+        case [PERSON.THIRD, NUMBER.PLURAL]:
+            return wordBase;
+        default:
+            return wordBase;
+    }
+}
+
+export function conjImA(wordBase: string, person: PERSON, number: NUMBER) {
+    switch ([person, number]) {
+        case [PERSON.FIRST, NUMBER.SINGLE]:
+            return wordBase;
+        case [PERSON.SECOND, NUMBER.SINGLE]:
+            return wordBase;
+        case [PERSON.FIRST, NUMBER.DUAL]:
+            return wordBase;
+        case [PERSON.SECOND, NUMBER.DUAL]:
+            return wordBase;
+        case [PERSON.FIRST, NUMBER.PLURAL]:
+            return wordBase;
+        case [PERSON.SECOND, NUMBER.PLURAL]:
+            return wordBase;
+        default:
+            return wordBase;
+    }
+}
+
+export function conjImE(wordBase: string, person: PERSON, number: NUMBER) {
+    switch ([person, number]) {
+        case [PERSON.FIRST, NUMBER.SINGLE]:
+            return wordBase;
+        case [PERSON.SECOND, NUMBER.SINGLE]:
+            return wordBase;
+        case [PERSON.FIRST, NUMBER.DUAL]:
+            return wordBase;
+        case [PERSON.SECOND, NUMBER.DUAL]:
+            return wordBase;
+        case [PERSON.FIRST, NUMBER.PLURAL]:
+            return wordBase;
+        case [PERSON.SECOND, NUMBER.PLURAL]:
+            return wordBase;
+        default:
+            return wordBase;
+    }
+}
+
+export function conjImI(wordBase: string, person: PERSON, number: NUMBER) {
+    switch ([person, number]) {
+        case [PERSON.FIRST, NUMBER.SINGLE]:
+            return wordBase;
+        case [PERSON.SECOND, NUMBER.SINGLE]:
+            return wordBase;
+        case [PERSON.FIRST, NUMBER.DUAL]:
+            return wordBase;
+        case [PERSON.SECOND, NUMBER.DUAL]:
+            return wordBase;
+        case [PERSON.FIRST, NUMBER.PLURAL]:
+            return wordBase;
+        case [PERSON.SECOND, NUMBER.PLURAL]:
+            return wordBase;
+        default:
+            return wordBase;
+    }
+}
+
+export function conjImU(wordBase: string, person: PERSON, number: NUMBER) {
+    switch ([person, number]) {
+        case [PERSON.FIRST, NUMBER.SINGLE]:
+            return wordBase;
+        case [PERSON.SECOND, NUMBER.SINGLE]:
+            return wordBase;
+        case [PERSON.FIRST, NUMBER.DUAL]:
+            return wordBase;
+        case [PERSON.SECOND, NUMBER.DUAL]:
+            return wordBase;
+        case [PERSON.FIRST, NUMBER.PLURAL]:
+            return wordBase;
+        case [PERSON.SECOND, NUMBER.PLURAL]:
+            return wordBase;
+        default:
+            return wordBase;
+    }
+}
+
+export function conjImX(wordBase: string, person: PERSON, number: NUMBER) {
+    switch ([person, number]) {
+        case [PERSON.FIRST, NUMBER.SINGLE]:
+            return wordBase;
+        case [PERSON.SECOND, NUMBER.SINGLE]:
+            return wordBase;
+        case [PERSON.FIRST, NUMBER.DUAL]:
+            return wordBase;
+        case [PERSON.SECOND, NUMBER.DUAL]:
+            return wordBase;
+        case [PERSON.FIRST, NUMBER.PLURAL]:
+            return wordBase;
+        case [PERSON.SECOND, NUMBER.PLURAL]:
+            return wordBase;
+        default:
+            return wordBase;
+    }
+}
+
+export function conjInpi(
     wordBase: string,
     conjType: CONJUGATION,
     person: PERSON,
@@ -55,13 +266,39 @@ export function conjIpi(
 ) {
     switch (conjType) {
         case CONJUGATION.A_TYPE:
-            return conjIApi(wordBase, person, number);
-        default:
-            return wordBase;
+            return conjInApi(wordBase, person, number);
+        case CONJUGATION.E_TYPE:
+            return conjInEpi(wordBase, person, number);
+        case CONJUGATION.EXTRA_TYPE:
+            return conjInXpi(wordBase, person, number);
+        case CONJUGATION.I_TYPE:
+            return conjInIpi(wordBase, person, number);
+        case CONJUGATION.U_TYPE:
+            return conjInUpi(wordBase, person, number);
     }
 }
 
-export function conjI(
+export function conjIm(
+    wordBase: string,
+    conjType: CONJUGATION,
+    person: PERSON,
+    number: NUMBER,
+) {
+    switch (conjType) {
+        case CONJUGATION.A_TYPE:
+            return conjImA(wordBase, person, number);
+        case CONJUGATION.E_TYPE:
+            return conjImE(wordBase, person, number);
+        case CONJUGATION.EXTRA_TYPE:
+            return conjImX(wordBase, person, number);
+        case CONJUGATION.I_TYPE:
+            return conjImI(wordBase, person, number);
+        case CONJUGATION.U_TYPE:
+            return conjImU(wordBase, person, number);
+    }
+}
+
+export function conjIn(
     wordBase: string,
     conjType: CONJUGATION,
     person: PERSON,
@@ -70,7 +307,7 @@ export function conjI(
 ) {
     switch (tense) {
         case TENSE.PRESENT_INDEFINITE:
-            return conjIpi(wordBase, conjType, person, number);
+            return conjInpi(wordBase, conjType, person, number);
     }
 }
 
@@ -83,7 +320,9 @@ export function conj(
     mood: MOOD = MOOD.INDICATIVE,
 ) {
     switch (mood) {
+        case MOOD.IMPERATIVE:
+            return conjIm(wordBase, conjType, person, number);
         default:
-            return conjI(wordBase, conjType, person, number, tense);
+            return conjIn(wordBase, conjType, person, number, tense);
     }
 }
