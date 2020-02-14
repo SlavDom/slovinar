@@ -1,14 +1,16 @@
-import React, {ChangeEvent, FormEvent, useState} from "react";
+import React from "react";
 import {useTranslation} from "../../lib/hooks";
-import {Box, Button, Form, FormField, Grid, Select, TextInput} from "grommet";
-import {enumToList, enumToNVList} from "../../lib/utils";
+import {Box, Button, Form, FormField, Grid, Select} from "grommet";
+import {enumToList} from "../../lib/utils";
 import {PART_OF_SPEECH} from "../../../dto/dist/word";
+import {API} from "../../lib/api";
 
+// FormEvent is not a valid type?
 function onWordFormSubmit(event: any) {
     console.log(event.value);
 }
 
-export default function MainPage() {
+export default function AddWord() {
     const word = useTranslation('word');
     const nest = useTranslation('nest');
     const pos = useTranslation('pos');
@@ -16,7 +18,7 @@ export default function MainPage() {
     const prefixes = useTranslation('prefixes');
     const send = useTranslation('send');
     const POSes = enumToList(PART_OF_SPEECH);
-
+    API.getPrefixes().then((r) => console.log(r));
     return <Grid>
         <Box
             align="center"
@@ -52,3 +54,9 @@ export default function MainPage() {
         </Box>
     </Grid>;
 }
+
+AddWord.initialProps = async () => {
+    const res = await API.getPrefixes();
+    console.log(res);
+  return {};
+};

@@ -1,4 +1,4 @@
-import {NUMBER} from "./declension";
+import {NUMBER} from "./noun";
 
 export enum PERSON {
     UNKNOWN,
