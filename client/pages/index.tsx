@@ -1,11 +1,11 @@
 import React, {ChangeEvent, Component, useState} from 'react';
 import styled from 'styled-components';
-import { Box, Text, TextInput} from 'grommet';
+import {Box, Text, TextInput} from 'grommet';
 import {useTranslation} from '../lib/hooks';
-import Link from "next/link";
+import {SearchInput} from "./../components/SearchInput";
 
 const Title = styled.h1`
-  font-size: 50px;
+  font-size: 25px;
   color: ${({theme}) => theme.global.colors.focus};
 `;
 
@@ -14,15 +14,9 @@ const Title = styled.h1`
 // `;
 
 export default function MainPage() {
-    const [wordName, setWordName] = useState('');
-    const addWord = useTranslation('addWord');
 
     return <div>
-        <Text>{useTranslation('search')}</Text>
-        <TextInput
-            value={wordName}
-            onChange={(e: ChangeEvent<HTMLInputElement>) => setWordName(e.target.value)}
-        />
-        {/*<Link href={"/words/new"}>{addWord}</Link>*/}
+        <Title>{useTranslation('search')}</Title>
+        <SearchInput />
     </div>;
 }
