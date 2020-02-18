@@ -7,10 +7,10 @@ import {useTranslation} from "../lib/hooks";
 
 export const Header = function() {
     const addWord = useTranslation('addWord');
-    return <LibHeader background='light-3' pad="small" >
+    return <LibHeader background='status-warning' pad="small" >
         <Button icon={<Icons.Home />} hoverIndicator onClick={() => Router.push('/')} />
         <Box direction="row" gap="medium">
-            <Link href={"/words/new"}>{addWord}</Link>
+            {/*<Link href={"/words/new"}>{addWord}</Link>*/}
         </Box>
     </LibHeader>;
 }
