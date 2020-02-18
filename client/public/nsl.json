@@ -1,9 +1,10 @@
 {
   "word": "Slovo",
   "nest": "Kore",
-  "pos": "Cest slova",
+  "pos": "Cestj slova",
   "affixes": "Nastavky",
   "prefixes": "Predstavky",
   "send": "Poslati",
-  "addWord": "Dodati slovo"
+  "addWord": "Dodati slovo",
+  "addAffix": "Dodati affix"
 }

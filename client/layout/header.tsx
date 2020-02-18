@@ -7,10 +7,12 @@ import {useTranslation} from "../lib/hooks";
 
 export const Header = function() {
     const addWord = useTranslation('addWord');
+    const addAffix = useTranslation('addAffix');
     return <LibHeader background='light-3' pad="small" >
         <Button icon={<Icons.Home />} hoverIndicator onClick={() => Router.push('/')} />
         <Box direction="row" gap="medium">
-            <Link href={"/words/new"}>{addWord}</Link>
+            <Link href={"/affixes/new"}><a>{addAffix}</a></Link>
+            <Link href={"/words/new"}><a>{addWord}</a></Link>
         </Box>
     </LibHeader>;
 }
