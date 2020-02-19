@@ -1,11 +1,11 @@
 import App from 'next/app';
 import React, { useEffect, useState } from 'react';
-import { grommet, Grommet, extendDefaultTheme, Grid, Box } from 'grommet';
+import { grommet, Grommet, extendDefaultTheme, Grid, Box} from 'grommet';
 import { deepMerge } from 'grommet/utils';
-import { Header } from '../layout/header';
+import Header from '../layout/header';
 import { I18nContext } from '../lib/hooks';
 import { setLanguageAsync } from '../lib/i18n';
-import { Sidebar } from '../layout/Sidebar';
+import Sidebar from '../layout/Sidebar';
 
 extendDefaultTheme(
   deepMerge(grommet, {
@@ -20,6 +20,10 @@ extendDefaultTheme(
 export default function MyApp({ Component, pageProps, dictionary, language }) {
   const [lang, updateLang] = useState(language);
   const [dict, updateDict] = useState(dictionary);
+  const items = [
+    { label: 'search', href: '/' },
+    { label: 'addWord', href: '/words/new' },
+  ];
 
   // If lang changed, re-request the dictionary
   useEffect(() => {
@@ -38,12 +42,9 @@ export default function MyApp({ Component, pageProps, dictionary, language }) {
             { name: 'header', start: [0, 0], end: [1, 0] },
             { name: 'sidebar', start: [0, 1], end: [0, 1] },
             { name: 'main', start: [1, 1], end: [1, 1] },
-          ]}
-        >
-          <Box gridArea="header">
-            <Header/>
-          </Box>
-          <Sidebar />
+          ]}>
+          <Header menu={items}/>
+          <Sidebar menu={items}/>
           <Box gridArea="main">
             <Component {...pageProps} />
           </Box>

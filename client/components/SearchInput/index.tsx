@@ -13,6 +13,7 @@ export const SearchInput = function () {
                 align="center"
                 pad={{horizontal: "small", vertical: "xsmall"}}
                 round="small"
+                background={'white'}
                 border={{
                     side: "all",
                     color: "border"
@@ -20,7 +21,7 @@ export const SearchInput = function () {
         <TextInput
             value={wordName}
             plain
-            placeholder="Enter..."
+            placeholder="Enter slovo..."
             onChange={(e: ChangeEvent<HTMLInputElement>) => setWordName(e.target.value)}
         />
         <Search color="brand"/>

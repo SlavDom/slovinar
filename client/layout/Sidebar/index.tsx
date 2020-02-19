@@ -1,30 +1,25 @@
 import * as React from 'react';
-import {Box, Nav, Button, Anchor} from "grommet";
-import Link from "next/link";
+import {Box, Nav, Anchor} from "grommet";
 import {useTranslation} from "../../lib/hooks";
-import styled from 'styled-components';
+import MyLink from "../../components/myLink";
 
-// const SidebarItem = styled.div`
-//   text-decoration: none;
-// `;
+const Sidebar = props => {
 
-//TODO отредактировать стили сайдбара
-export const Sidebar = function () {
-    const sideBar = [
-        {title: 'search', href: '/'},
-        {title: 'addWord', href: '/words/new'},
-    ];
-
-    return <Box gridArea="sidebar" width="small" background="accent-4">
+    return <Box gridArea="sidebar" background="brand">
         <Nav>
-            {sideBar.map((e: any, index) => (
+            {props.menu.map((item: any, index) => (
+              <Box key={index} pad="small">
                 <Anchor
-                    key={index}
-                    as={Link}
-                    href={e.href}
-                    label={useTranslation(e.title)}
+                    as={MyLink}
+                    href={item.href}
+                    label={useTranslation(item.label)}
+                    color={'white'}
+                    alignSelf={'center'}
                 />
+              </Box>
             ))}
         </Nav>
     </Box>;
-}
+};
+
+export default Sidebar
