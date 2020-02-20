@@ -1,16 +1,29 @@
 import * as React from 'react';
-import {Button, Box, Header as LibHeader} from "grommet";
+import { Button, Box, Header as LibHeader, Nav, Anchor } from 'grommet';
 import * as Icons from 'grommet-icons';
-import Router from "next/router";
-import Link from "next/link";
-import {useTranslation} from "../lib/hooks";
+import Router from 'next/router';
+import { useTranslation } from '../lib/hooks';
+import MyLink from '../components/myLink';
 
-export const Header = function() {
-    const addWord = useTranslation('addWord');
-    return <LibHeader background='light-3' pad="small" >
-        <Button icon={<Icons.Home />} hoverIndicator onClick={() => Router.push('/')} />
-        <Box direction="row" gap="medium">
-            <Link href={"/words/new"}>{addWord}</Link>
-        </Box>
-    </LibHeader>;
-}
+const Header = props => {
+  const addWord = useTranslation('addWord');
+
+  return <Box gridArea="header">
+    <LibHeader background='neutral-2'>
+      <Button icon={<Icons.Home/>} hoverIndicator onClick={() => Router.push('/')}/>
+      <Nav direction="row" pad="small">
+        {props.menu.map((item: any, index) => (
+          <Anchor
+            as={MyLink}
+            href={item.href}
+            label={useTranslation(item.label)}
+            key={index}
+            color="white"
+          />
+        ))}
+      </Nav>
+    </LibHeader>
+  </Box>;
+};
+
+export default Header

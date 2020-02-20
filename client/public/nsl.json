@@ -5,5 +5,7 @@
   "affixes": "Nastavky",
   "prefixes": "Predstavky",
   "send": "Poslati",
-  "addWord": "Dodati slovo"
+  "addWord": "Dodati slovo",
+  "search": "Search",
+  "addForm": "Dodati slovo form"
 }
