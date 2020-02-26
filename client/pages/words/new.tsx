@@ -19,7 +19,6 @@ export default function AddWord() {
     const prefixes = useTranslation('prefixes');
     const send = useTranslation('send');
     const POSes = enumToList(PART_OF_SPEECH);
-    API.getPrefixes().then((r) => console.log(r));
     return <Grid>
         <Box
             align="center"
