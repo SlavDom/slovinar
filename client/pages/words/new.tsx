@@ -11,7 +11,8 @@ function onWordFormSubmit(event: any) {
     console.log(event.value);
 }
 
-export default function AddWord() {
+function AddWord(props) {
+    console.log(props);
     const word = useTranslation('word');
     const nest = useTranslation('nest');
     const pos = useTranslation('pos');
@@ -23,14 +24,13 @@ export default function AddWord() {
         <Box
             align="center"
             background="light-1"
-            pad="medium"
-        >
+            pad="medium">
             <Title>{useTranslation('addForm')}</Title>
             <Form onSubmit={onWordFormSubmit}>
-                <FormField name="value" label={word} />
+                <FormField name="value" label={word}/>
                 <Box direction="row" pad="small">
-                    <FormField name="nest" label={nest} margin={{ right: 'large' }}/>
-                    <FormField name="suffixes" label={affixes} margin={{ right: 'large' }}/>
+                    <FormField name="nest" label={nest} margin={{right: 'large'}}/>
+                    <FormField name="suffixes" label={affixes} margin={{right: 'large'}}/>
                     <FormField name="prefixes" label={prefixes}/>
                 </Box>
                 <Box direction="row" pad="small">
@@ -39,20 +39,24 @@ export default function AddWord() {
                         label={pos}
                         component={Select}
                         options={POSes}
-                        margin={{ right: 'large' }}
-                    />
-                    <FormField name="decl" label={"Declension"} component={Select} options={[]} margin={{ right: 'large' }}/>
-                    <FormField name="conj" label={"Conjunction"} component={Select} options={[]} margin={{ right: 'large' }}/>
-                    <FormField name="gender" label={"Gender"} component={Select} options={[]} margin={{ right: 'large' }}/>
+                        margin={{ right: 'large' }}/>
+                    <FormField name="decl" label={"Declension"} component={Select} options={[]}
+                               margin={{right: 'large'}}/>
+                    <FormField name="conj" label={"Conjunction"} component={Select} options={[]}
+                               margin={{right: 'large'}}/>
+                    <FormField name="gender" label={"Gender"} component={Select} options={[]}
+                               margin={{right: 'large'}}/>
                 </Box>
-                <Button type="submit" primary label={send} />
+                <Button type="submit" primary label={send}/>
             </Form>
         </Box>
     </Grid>;
 }
 
-AddWord.initialProps = async () => {
+AddWord.getInitialProps = async () => {
+    console.log('res');
     const res = await API.getPrefixes();
-    console.log(res);
-  return {};
+    return { prefixes: 'sdfsdf' };
 };
+
+export default AddWord;

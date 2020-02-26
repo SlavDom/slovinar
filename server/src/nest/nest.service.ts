@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import {InjectRepository} from '@nestjs/typeorm';
-import { Repository } from 'typeorm';
+import {Like, Repository} from 'typeorm';
 import {Nest} from './nest.entity';
 
 @Injectable()
@@ -12,6 +12,14 @@ export class NestService {
 
     async findAll(): Promise<Nest[]> {
         return this.nestRepository.find();
+    }
+
+    async findByName(name: string): Promise<Nest[]> {
+        return this.nestRepository.find({
+            where: {
+                value: Like(`%${name}%`),
+            },
+        });
     }
 
     async add(word: Nest): Promise<Nest> {
