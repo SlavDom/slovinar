@@ -23,6 +23,7 @@ function MyApp({ Component, pageProps, dictionary, language }) {
   const items = [
     { label: 'search', href: '/' },
     { label: 'addWord', href: '/words/new' },
+    { label: 'addAffix', href: '/affixes/new' },
   ];
 
   // If lang changed, re-request the dictionary

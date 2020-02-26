@@ -6,7 +6,6 @@ import { useTranslation } from '../lib/hooks';
 import MyLink from '../components/myLink';
 
 const Header = props => {
-  const addWord = useTranslation('addWord');
 
   return <Box gridArea="header">
     <LibHeader background='neutral-2'>
