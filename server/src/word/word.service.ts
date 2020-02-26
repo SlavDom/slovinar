@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import {InjectRepository} from '@nestjs/typeorm';
-import { Repository } from 'typeorm';
+import {Like, Repository} from 'typeorm';
 import { Word } from './word.entity';
 import {WordDTO} from '../../../dto/dist/word';
 
@@ -13,6 +13,10 @@ export class WordService {
 
     async findAll(): Promise<Word[]> {
         return this.wordRepository.find();
+    }
+
+    async findByName(name: string): Promise<Word[]> {
+        return this.wordRepository.find({ where: { value: Like(`%${name}%`) }});
     }
 
     async add(wordDTO: WordDTO): Promise<Word> {

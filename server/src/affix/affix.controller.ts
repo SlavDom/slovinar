@@ -6,15 +6,20 @@ import {AffixDTO} from '../../../dto/dist/affix';
 export class AffixController {
     constructor(private readonly affixService: AffixService) {}
     @Get()
-    public async findAll(@Query() query: AffixDTO): Promise<AffixDTO[]> {
+    public async findAll(
+        @Query()
+        query: AffixDTO,
+    ): Promise<AffixDTO[]> {
         if (query.value || query.affixType) {
             return this.affixService.findByNameAndType(query.value, query.affixType);
-        } else {
-            return this.affixService.findAll();
         }
+        return this.affixService.findAll();
     }
     @Post()
-    public async add(@Body() affixDto: AffixDTO): Promise<AffixDTO> {
+    public async add(
+        @Body()
+        affixDto: AffixDTO,
+    ): Promise<AffixDTO> {
         return this.affixService.add(affixDto);
     }
 }

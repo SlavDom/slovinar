@@ -7,15 +7,20 @@ import {Nest} from './nest.entity';
 export class NestController {
     constructor(private readonly nestService: NestService) {}
     @Get()
-    public async findAll(@Query() query: NestDTO): Promise<NestDTO[]> {
+    public async findAll(
+        @Query()
+        query: NestDTO,
+    ): Promise<NestDTO[]> {
         if (query.value) {
             return this.nestService.findByName(query.value);
-        } else {
-            return this.nestService.findAll();
         }
+        return this.nestService.findAll();
     }
     @Post()
-    public async create(@Body() nestDTO: NestDTO): Promise<NestDTO> {
+    public async create(
+        @Body()
+        nestDTO: NestDTO,
+    ): Promise<NestDTO> {
         const nest = new Nest();
         nest.value = nestDTO.value;
         return this.nestService.add(nest);
