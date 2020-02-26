@@ -1,6 +1,6 @@
 module.exports = {
   env: {
     apiHost: "localhost",
-    apiPort: "3000",
+    apiPort: "3300",
   },
 };
