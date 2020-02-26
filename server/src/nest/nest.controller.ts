@@ -1,4 +1,4 @@
-import {Body, Controller, Get, Param, Post} from '@nestjs/common';
+import {Body, Controller, Get, Param, Post, Query} from '@nestjs/common';
 import {NestService} from './nest.service';
 import {NestDTO} from '../../../dto/dist/nest';
 import {Nest} from './nest.entity';
@@ -7,8 +7,12 @@ import {Nest} from './nest.entity';
 export class NestController {
     constructor(private readonly nestService: NestService) {}
     @Get()
-    public async findAll(): Promise<NestDTO[]> {
-        return this.nestService.findAll();
+    public async findAll(@Query() query: NestDTO): Promise<NestDTO[]> {
+        if (query.value) {
+            return this.nestService.findByName(query.value);
+        } else {
+            return this.nestService.findAll();
+        }
     }
     @Post()
     public async create(@Body() nestDTO: NestDTO): Promise<NestDTO> {

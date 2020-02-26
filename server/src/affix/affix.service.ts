@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import {InjectRepository} from '@nestjs/typeorm';
-import { Repository } from 'typeorm';
+import {Like, Repository} from 'typeorm';
 import {Affix} from './affix.entity';
 import {AFFIX_TYPE, AffixDTO} from '../../../dto/dist/affix';
 
@@ -23,7 +23,7 @@ export class AffixService {
     async findByNameAndType(name: string, type: AFFIX_TYPE): Promise<Affix[]> {
         const query: any = {};
         if (name) {
-            query.value = name;
+            query.value = Like(`%${name}%`);
         }
         if (type) {
             query.affixType = type;
