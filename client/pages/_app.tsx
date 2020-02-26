@@ -17,7 +17,7 @@ extendDefaultTheme(
   }),
 );
 
-export default function MyApp({ Component, pageProps, dictionary, language }) {
+function MyApp({ Component, pageProps, dictionary, language }) {
   const [lang, updateLang] = useState(language);
   const [dict, updateDict] = useState(dictionary);
   const items = [
@@ -54,8 +54,14 @@ export default function MyApp({ Component, pageProps, dictionary, language }) {
   );
 }
 
-MyApp.getInitialProps = async () => {
+MyApp.getInitialProps = async ({ Component, ctx }) => {
   const language = 'nsl';
+  let pageProps = {};
   const dictionary = await setLanguageAsync(language);
-  return { dictionary, language };
+  if (Component.getInitialProps) {
+    pageProps = await Component.getInitialProps(ctx);
+  }
+  return { pageProps, dictionary, language };
 };
+
+export default MyApp;

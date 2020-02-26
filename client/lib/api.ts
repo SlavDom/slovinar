@@ -1,3 +1,5 @@
+import * as fetch from 'isomorphic-fetch';
+
 class Api {
     private host: string = `${process.env.apiHost}:${process.env.apiPort}`;
 

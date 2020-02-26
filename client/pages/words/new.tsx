@@ -11,7 +11,7 @@ function onWordFormSubmit(event: any) {
     console.log(event.value);
 }
 
-export default function AddWord() {
+function AddWord() {
     const word = useTranslation('word');
     const nest = useTranslation('nest');
     const pos = useTranslation('pos');
@@ -54,8 +54,10 @@ export default function AddWord() {
     </Grid>;
 }
 
-AddWord.initialProps = async () => {
-    const res = await API.getPrefixes();
-    console.log(res);
+AddWord.getInitialProps = async () => {
+    // const res = await API.getPrefixes();
+    console.log('res');
     return {};
 };
+
+export default AddWord;
