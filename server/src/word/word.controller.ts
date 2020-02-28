@@ -1,5 +1,5 @@
 import {Body, Controller, Get, Post, Query} from '@nestjs/common';
-import {WordDTO} from '../../../dto/dist/word';
+import {WordDTO} from 'dto';
 import {WordService} from './word.service';
 
 @Controller('words')

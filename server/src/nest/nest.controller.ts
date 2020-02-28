@@ -1,6 +1,6 @@
 import {Body, Controller, Get, Param, Post, Query} from '@nestjs/common';
 import {NestService} from './nest.service';
-import {NestDTO} from '../../../dto/dist/nest';
+import {NestDTO} from 'dto';
 import {Nest} from './nest.entity';
 
 @Controller('nests')

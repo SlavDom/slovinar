@@ -1,6 +1,6 @@
 import {Body, Controller, Get, Post, Query} from '@nestjs/common';
 import {AffixService} from './affix.service';
-import {AffixDTO} from '../../../dto/dist/affix';
+import {AffixDTO} from 'dto';
 
 @Controller('affixes')
 export class AffixController {
