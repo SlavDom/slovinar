@@ -1,5 +1,5 @@
 import {Body, Controller, Get, Post, Query} from '@nestjs/common';
-import {WordDTO} from 'dto';
+import {WordDTO} from 'slovinar-dto';
 import {WordService} from './word.service';
 
 @Controller('words')

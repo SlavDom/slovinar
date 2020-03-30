@@ -1,7 +1,7 @@
 import {Entity, Column, PrimaryGeneratedColumn, ManyToMany} from 'typeorm';
 import {Nest} from '../nest/nest.entity';
 import {Affix} from '../affix/affix.entity';
-import {PART_OF_SPEECH} from '../../../dto/dist/word';
+import {PART_OF_SPEECH} from 'slovinar-dto';
 
 @Entity()
 export class Word {

@@ -1,5 +1,5 @@
 import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
-import {AFFIX_TYPE} from '../../../dto/dist/affix';
+import {AFFIX_TYPE} from 'slovinar-dto';
 
 @Entity()
 export class Affix {

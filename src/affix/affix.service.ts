@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 import {InjectRepository} from '@nestjs/typeorm';
 import {Like, Repository} from 'typeorm';
 import {Affix} from './affix.entity';
-import {AFFIX_TYPE, AffixDTO} from 'dto';
+import {AFFIX_TYPE, AffixDTO} from 'slovinar-dto';
 
 @Injectable()
 export class AffixService {
